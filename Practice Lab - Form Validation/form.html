@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FORM VALIDATION</title>
+        <style>
+            .body{
+                padding-left: 20%;
+                padding-right: 20%;
+                padding-top: 5%;
+            }
+            #event_title {
+                width:500px;
+            }
+            .submit_button {
+                padding-left: 40%;
+                padding-right: 40%;
+            }
+        </style>
+        <script src = "formValidation.js"></script>
+    </head>
+    <body>
+        <div class = "body">
+            <form action = "validate()">
+                <table>
+                    <tr>
+                        <td>Event Type:</td>
+                        <td>
+                            <select id = "event_type">
+                                <option value = "Seminar">Seminars</option>
+                                <option value = "Conference">Conference</option>
+                                <option value = "Trade Show">Trade Show</option>
+                                <option value = "Workshop">Workshop</option>
+                                <option value = "Other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Event Title:</td>
+                        <td><input type = "text" id = "event_title"></td>
+                    </tr>
+                    <tr>
+                        <td>Event Dates:</td>
+                        <td><input type = "date" id = "date_begin"> to <input type = "date" id = "date_end"></td>
+                    </tr>
+                    <tr>
+                        <td>Posting Date:</td>
+                        <td><input type = "date" id = "date_posted"></td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <td><input type = "checkbox" id = "reg_require"> Is Registration Required?</td>
+                    </tr>
+                    <tr>
+                        <td><input type = "checkbox" id = "reg_fam_prog"> Is this event associated with any Family programs?</td>
+                    </tr>
+                    <tr>
+                        <td><input type = "checkbox" id = "reg_email_rec"> Upon Registration Completion, Are Users to Receive an Auto Generated Email?</td>
+                    </tr>
+                    <tr>
+                        <td><input type = "checkbox" id = "point_cont"> Is There a Point of Contact?</td>
+                    </tr>
+                    <tr>
+                        <td><input type = "checkbox" id = "host_cont"> Is There a Hosting Command Point of Contact</td>
+                    </tr>
+                </table>
+                <br>
+                <div class = "submit_button">
+                    <button onclick = "validate()">Save</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
